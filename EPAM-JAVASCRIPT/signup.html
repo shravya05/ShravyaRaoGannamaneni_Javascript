@@ -1,0 +1,43 @@
+
+<html>
+<head>
+    <title>Signup</title>
+    <link rel="stylesheet" href="signup-style.css">
+
+</head>
+<body>
+    <main>
+        <div class="background">
+            <div class="text">
+		<h2>Signup</h2>
+                <p>Have Account? <a href="login.html">Login</a></p>
+            </div>
+            <div class="box">
+                <form name="reg" onSubmit="return regval();" id="reg" class="form" >
+                    <input type="text" name="fullname" class="fullname" placeholder="Name" required>
+                    <input type="text" name="email" class="email" placeholder="xyz@abc.com" required>
+                    <input type="text" name="username" class="username" placeholder="Username" required>
+                    <input type="password" name="password" class="password" placeholder="Password" required>
+                    <input type="submit" class="button" value="Register">
+                </form>
+            </div>
+        </div>
+    </main>
+<script>
+function regval()
+{
+ var x=document.reg.username.value;
+ var y=document.reg.password.value;
+ if(x.length>=4 && y.length>=4){
+  alert("successful");
+ return true;
+}
+else
+{
+ alert("Failed");
+ return false;
+}
+}
+</script>
+</body>
+</html>

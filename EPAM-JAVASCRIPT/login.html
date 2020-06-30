@@ -1,0 +1,45 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="login-style.css">
+</head>
+<body>
+    <main>
+        <div class="background">
+            <div class="text">
+                <h4>Login</h4>
+                <p>No Account? <a href="signup.html">Sign up</a></p>
+            </div>
+            <div class="box">
+                <form name="login" onSubmit="return val();" id="login" class="form" >
+                    <input type="text" name="username" class="username" placeholder="Username" required>
+                    <input type="password" name="password" class="password" placeholder="Password" required>
+                    <input type="submit" class="button" value="Login">
+                </form>
+            </div>
+        </div>
+    </main>
+<script>
+function val()
+{
+ var x=document.login.username.value;
+ var y=document.login.password.value;
+ if(x=="user" && y=="pass")
+  {
+   alert("successful");
+   return true;
+  }
+else
+{
+ alert("failed");
+ return false;
+
+}
+}
+
+</script>
+</body>
+</html>
